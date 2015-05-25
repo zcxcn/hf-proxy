@@ -1,0 +1,70 @@
+{
+    "www": {
+        "path": "home"
+    },
+    "app": {
+        "path": "app"
+    },
+    "bus": {
+        "path": "bus"
+    },
+    "car": {
+        "path": "car"
+    },
+    "acar": {
+        "path": "car"
+    },
+    "i": {
+        "path": "ddr"
+    },
+    "deposite": {
+        "path": "deposite"
+    },
+    "flight": {
+        "path": "flight"
+    },
+    "gongyu": {
+        "path": "gongyu"
+    },
+    "guide": {
+        "path": "guide"
+    },
+    "hotel": {
+        "path": "hotel"
+    },
+    "lvtu": {
+        "path": "lvtu"
+    },
+    "order": {
+        "path": "order"
+    },
+    "dujia": {
+        "path": "package"
+    },
+    "pay": {
+        "path": "paycenter"
+    },
+    "piao": {
+        "path": "piao"
+    },
+    "train": {
+        "path": "train"
+    },
+    "travel": {
+        "path": "travel"
+    },
+    "tuan": {
+        "path": "tuan"
+    },
+    "ugc": {
+        "path": "ugc"
+    },
+    "user": {
+        "path": "user",
+        "headerHTML":"header_user_mini.html",
+        "headerStyle":"header_user_styles.html"
+    },
+    "zhixin": {
+        "path": "zhixin"
+    }
+}
