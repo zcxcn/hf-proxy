@@ -7,7 +7,7 @@
      main = require('./lib/main'),
      multiprocess = require('./lib/multiprocess');
  process.on('uncaughtException', function(err) {
-     console.log('error:', err);
+     console.log('进程error:', err);
  });
 
  var selects = [];
@@ -98,7 +98,7 @@
          .use(function(req, res) {
              var protocol = req._parsedUrl.protocol;
              var host = req.headers.host;
-             console.log(protocol + '//' + host)
+             
              proxy.web(req, res, {
                  target: protocol + '//' + host
              }, function(e) {
@@ -114,7 +114,7 @@
 
      console.log(8001);
  }, {
-     numCPUs: 8
+     numCPUs: 1
  })
 
  function getScript(callback) {
