@@ -29,6 +29,7 @@
     "guide": {
         "path": "guide"
     },
+    
     "hotel": {
         "path": "hotel"
     },
@@ -36,7 +37,9 @@
         "path": "lvtu"
     },
     "order": {
-        "path": "order"
+        "path": "user",
+        "headerHTML": "header_user.html",
+        "headerStyle": "header_user_styles.html"
     },
     "dujia": {
         "path": "package"
@@ -61,8 +64,10 @@
     },
     "user": {
         "path": "user",
-        "headerHTML":"header_user_mini.html",
-        "headerStyle":"header_user_styles.html"
+        "headerHTML": "header_user.html",
+        "headerStyle": "header_user_styles.html",
+        "sidebarHTML": "ucsidebar.html",
+        "sidebarStyle": "ucsidebar_styles.html"
     },
     "zhixin": {
         "path": "zhixin"

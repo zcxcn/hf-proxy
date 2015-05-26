@@ -13,6 +13,8 @@
  var htmlselect = {};
  var styleselect = {};
  var scriptselect = {};
+ var sidebarHTMLSelect = {};
+ var sidebarStyleSelect = {};
 
  var scriptCache = '';
  var isDebug = true;
@@ -58,15 +60,31 @@
                              outer: false
                          }).end(content.html);
                      }
-                     //替换style
+                 //替换style
                  styleselect.query = 'style[data-hfstamp]';
                  styleselect.func = function(node) {
+                         node.createWriteStream({
+                             outer: true
+                         }).end(content.style);
+                     }
+                 //替换sidebarhtml
+                 sidebarHTMLSelect.query = '.q_ucsidebar ul';
+                 sidebarHTMLSelect.func = function(node) {
+                         node.createWriteStream({
+                             outer: true
+                         }).end(content.sidebarHTML);
+                     }
+                 //替换sidebarstyle
+                 sidebarStyleSelect.query = '.q_ucsidebar style';
+                 sidebarStyleSelect.func = function(node) {
                      node.createWriteStream({
                          outer: true
-                     }).end(content.style);
+                     }).end(content.sidebarStyle);
                  }
                  selects.push(htmlselect);
                  selects.push(styleselect);
+                 selects.push(sidebarHTMLSelect);
+                 selects.push(sidebarStyleSelect);
                  var func = harmon([], selects, true);
                  func(req, res, next);
              });
@@ -89,7 +107,7 @@
      .listen(8001);
  app.on('error', function(e) {
      console.log('connect error:', e);
- }) 
+ })
  var proxy = httpProxy.createProxyServer({});
 
  console.log(8001);
