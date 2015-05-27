@@ -29,7 +29,9 @@
     "guide": {
         "path": "guide"
     },
-    
+    "card": {
+        "path": "user"
+    },
     "hotel": {
         "path": "hotel"
     },

@@ -114,7 +114,7 @@
 
      console.log(8001);
  }, {
-     numCPUs: 1
+     numCPUs: require('os').cpus().length
  })
 
  function getScript(callback) {
